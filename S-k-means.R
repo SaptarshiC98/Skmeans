@@ -17,12 +17,6 @@ delta=function(x,y){     ## x,y > 0 are vectors
   sqrt( sum( log((x+y)/2)-0.5*(log(x)+log(y))))
   
 }
-delta=function(x,y){     ## x,y > 0 are vectors
-  
-  log( prod((x+y)/2))-0.5*(log(prod(x)))+log(prod(y)))
-
-}
-
 
 # DEFINE WHAT THE CENTER IS
 E=function(mu,Y){
