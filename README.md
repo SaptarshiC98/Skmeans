@@ -1,6 +1,7 @@
 # Skmeans
 The datasets are uploaded in the mydata folder. The last column denotes the ground truth. The R code for the S-k-means algorithm and other peer algorithms are uploaded in the functions.R file. An example run is given in Example.pdf and Example.Rmd.
 
+## Details
 The details for S-k-means are as follows:
 
 #### Inputs:
@@ -13,6 +14,6 @@ label     : An n-length vector denoting the class labels.
 centroids : A k * p matrix, whose rows denote the cluster centroids.
 
 
-If you use the code or the datasets, please acknowledge so by citing the following article.
+## Paper
 S. Chakraborty, S. Das, k−Means clustering with a new divergence-based distance metric: Convergence and
 performance analysis, Pattern Recognition Letters (2017), https://doi.org/10.1016/j.patrec.2017.09.025
