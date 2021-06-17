@@ -1,0 +1,67 @@
+---
+title: "S-k-means"
+author: "Saptarshi Chakraborty and Swagatam Das"
+date: "17 June 2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Load The Libraries
+
+
+```{r}
+library(igraph)
+library(rgl)
+library(MASS)
+library(mlbench)
+```
+
+# Load the Source Codes
+
+```{r}
+source('functions.R')
+```
+
+# Implementation on Iris Dataset
+
+```{r}
+# Load the data
+data(iris)
+X=iris
+X=data.matrix(X)
+
+# Seperate out the class labels
+toss=X[,5]
+X=X[,-5]
+n=dim(X)[1]
+X=X-min(X)+1 # Makes every cooridinate positive  
+# Plot the data
+plot(X,col=toss)
+```
+
+```{r}
+numclus=3 # Number of Clusters
+sa=sample(n,numclus) # Sample the cluster centroids uniformly from the data
+M=X[sa,] # Construct the initial centroid matrix
+```
+
+## Run the $S$-$k$-means algorithm
+
+```{r}
+l=s.kmeans(X,M,30) # Run the S-k-means algorithm with 30 iteartions
+```
+
+
+```{r}
+l
+```
+
+## Compare between the ground truth and obtained cluster centroids
+
+```{r}
+compare(l$label,toss,'adjusted.rand')
+```
+
