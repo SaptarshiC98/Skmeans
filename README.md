@@ -5,13 +5,13 @@ The datasets are uploaded in the mydata folder. The last column denotes the grou
 The details for S-k-means are as follows:
 
 #### Inputs:
-X       : An n * p matrix to be clustered, whose rows denote the data points.
-M       : A k * p matrix, whose rows denote the inital cluster centroids.
-itermax : Maximum number of itearions to run. Default is 30.
+1. X       : An n * p matrix to be clustered, whose rows denote the data points.
+2. M       : A k * p matrix, whose rows denote the inital cluster centroids.
+3. itermax : Maximum number of itearions to run. Default is 30.
 #### Outputs:
 
-label     : An n-length vector denoting the class labels. 
-centroids : A k * p matrix, whose rows denote the cluster centroids.
+1. label     : An n-length vector denoting the class labels. 
+2. centroids : A k * p matrix, whose rows denote the cluster centroids.
 
 
 ## Paper
